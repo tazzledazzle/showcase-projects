@@ -1,4 +1,13 @@
-# REST API Test Demo
+# 🔌 REST API Test Demo
+
+[![Python](https://img.shields.io/badge/Python-3.11+-3776AB?logo=python&logoColor=white)](https://www.python.org/)
+[![FastAPI](https://img.shields.io/badge/FastAPI-0.104+-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com/)
+[![Pytest](https://img.shields.io/badge/Pytest-Latest-0A9EDC?logo=pytest&logoColor=white)](https://pytest.org/)
+[![Docker](https://img.shields.io/badge/Docker-Ready-2496ED?logo=docker&logoColor=white)](https://www.docker.com/)
+
+> Production-grade REST API with comprehensive testing, OpenAPI documentation, and CI/CD integration.
+
+## 🎯 Overview
 
 **Problem:** Show a minimal but production-style REST API with a clear contract, automated tests, and runnable deployment.
 
@@ -8,18 +17,23 @@
 
 ---
 
-## Contents
+## 📦 Contents
 
-- **API:** FastAPI app with a few resources (e.g. items CRUD-style), OpenAPI at `/docs` and `/openapi.json`.
-- **Tests:** Pytest unit and integration tests; see [Test approach](docs/test-plan.md).
-- **Docker:** Dockerfile and docker-compose for local run.
-- **CI:** GitHub Actions: run tests, optionally build image.
+| Component | Description |
+|-----------|-------------|
+| **API** | FastAPI app with CRUD-style resources (e.g. items) |
+| **OpenAPI** | Interactive documentation at `/docs` and `/openapi.json` |
+| **Tests** | Pytest unit and integration tests with coverage reporting |
+| **Docker** | Dockerfile and docker-compose for local deployment |
+| **CI** | GitHub Actions: run tests, optionally build image |
+
+📚 **Test Strategy:** See [Test approach](docs/test-plan.md) for detailed testing methodology.
 
 ---
 
-## How to run
+## 🚀 How to Run
 
-**Local (no Docker):**
+### Local Development (No Docker)
 
 ```bash
 python -m venv .venv
@@ -28,29 +42,36 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-Open http://localhost:8000/docs for Swagger UI.
+🌐 **API:** http://localhost:8000  
+📚 **Swagger UI:** http://localhost:8000/docs
 
-**Docker:**
+### Using Docker (Recommended)
 
 ```bash
 docker compose up --build
 ```
 
-API at http://localhost:8000; docs at http://localhost:8000/docs.
+🌐 **API:** http://localhost:8000  
+📚 **Swagger UI:** http://localhost:8000/docs
 
 ---
 
-## How to run tests
+## 🧪 Running Tests
 
 ```bash
 pip install -r requirements.txt
 pytest -v
-# With coverage:
+
+# With coverage report:
 pytest -v --cov=app --cov-report=term-missing
 ```
 
 ---
 
-## License
+## 📄 License
 
-MIT.
+MIT License - see the LICENSE file for details.
+
+---
+
+[← Back to Showcase Projects](../README.md)

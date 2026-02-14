@@ -1,4 +1,12 @@
-# Modular JVM Build
+# 🏗️ Modular JVM Build
+
+[![Kotlin](https://img.shields.io/badge/Kotlin-1.9+-7F52FF?logo=kotlin&logoColor=white)](https://kotlinlang.org/)
+[![Gradle](https://img.shields.io/badge/Gradle-8.5+-02303A?logo=gradle&logoColor=white)](https://gradle.org/)
+[![Spring Boot](https://img.shields.io/badge/Spring%20Boot-3.2+-6DB33F?logo=springboot&logoColor=white)](https://spring.io/projects/spring-boot)
+
+> Production-ready multi-module Gradle architecture demonstrating clean separation of concerns and cross-platform JVM deployment.
+
+## 🎯 Overview
 
 **Problem:** Demonstrate a modular JVM architecture and industry-standard build setup that supports cross-platform deployment (e.g. Apple Silicon and x86 JVM).
 
@@ -8,7 +16,7 @@
 
 ---
 
-## Module layout
+## 📦 Module Layout
 
 | Module | Purpose |
 |--------|---------|
@@ -20,9 +28,9 @@ See [Architecture](docs/architecture.md) for design and cross-platform notes.
 
 ---
 
-## How to run
+## 🚀 How to Run
 
-**Build and test:**
+### Build and Test
 
 If you have the Gradle wrapper (run `gradle wrapper` once if needed):
 
@@ -36,7 +44,7 @@ Or with Gradle installed:
 gradle build
 ```
 
-**Run the application:**
+### Run the Application
 
 ```bash
 ./gradlew :app:bootRun
@@ -44,9 +52,10 @@ gradle build
 gradle :app:bootRun
 ```
 
-API: http://localhost:8080. Example: `GET http://localhost:8080/api/health`.
+🌐 **API:** http://localhost:8080  
+📍 **Health Check:** `GET http://localhost:8080/api/health`
 
-**Run tests only:**
+### Run Tests Only
 
 ```bash
 ./gradlew test
@@ -54,12 +63,16 @@ API: http://localhost:8080. Example: `GET http://localhost:8080/api/health`.
 
 ---
 
-## Cross-platform note
+## 💻 Cross-Platform Support
 
 The project is JVM-only; Gradle and the JVM run on Apple Silicon (aarch64) and x86. For future multi-arch native or Docker images, add architecture-specific tasks or use Gradle toolchains; see `docs/architecture.md`.
 
 ---
 
-## License
+## 📄 License
 
-MIT.
+MIT License - see the LICENSE file for details.
+
+---
+
+[← Back to Showcase Projects](../README.md)
