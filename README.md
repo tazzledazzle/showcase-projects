@@ -109,10 +109,10 @@ Each project is self-contained, production-ready, and thoroughly documented.
 
 ```mermaid
 graph LR
-    A[Client] -->|POST /jobs| B[FastAPI]
-    B -->|Enqueue| C[Redis]
-    D[Worker] -->|Process| C
-    D -->|Store| E[(PostgreSQL)]
+    A[🖥️ Client] -->|POST /jobs| B[🔌 FastAPI]
+    B -->|Enqueue| C[📮 Redis]
+    D[⚙️ Worker] -->|Process| C
+    D -->|Store| E[("🗄️ PostgreSQL")]
     A -->|GET /jobs/:id| B
     B -->|Query| E
 ```
